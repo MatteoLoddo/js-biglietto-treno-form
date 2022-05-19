@@ -1,6 +1,6 @@
 // prendere il valore dato dall utente negli input
 const userName = document.querySelector("[name='user-name']");
-let kmDaPercorrere = document.querySelector("[name='km-percorrere']");
+const kmDaPercorrere = document.querySelector("[name='km-percorrere']");
 const fasciaEta = document.querySelector("[name='fascia-eta']");
 // bottone invia
 const buttonInvia = document.getElementById("btn-invia");
