@@ -1,0 +1,22 @@
+:root{
+    --first-color:#B91450;
+    --white:#ffff;
+    --my-gray:#808080;
+
+}
+
+.my-bg-frist{
+    background-color: var(--first-color);
+}
+
+.my-bg-second{
+    background-color: var(--white);
+}
+
+.my-bg-third{
+    background-color: var(--my-gray);
+}
+
+.my-row-setting{
+    border-radius: 25px;
+}
