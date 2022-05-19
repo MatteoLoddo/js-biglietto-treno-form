@@ -13,15 +13,15 @@
         <div class="container-xl my-bg-frist p-5 ">
             <h1 class="text-center text-uppercase text-white">Calcola il prezzo del tuo biglietto</h1>
 <!-- dati utente -->
-            <div class="row my-3 py-3 text-center my-bg-second my-row-setting">
+            <div class="row my-3 py-3 text-center my-bg-second my-row-setting try-my-show">
                 
                 <div class="col py-3">
                     <h4>Nome Cognome</h4>
-                    <input type="text" placeholder="Name" name="user-name" value="">
+                    <input type="text" name="user-name" value="">
                 </div>
                 <div class="col py-3">
                     <h4>Km da percorrere</h4>
-                    <input  type="text" placeholder="Km" name="km-percorrere" value="3">
+                    <input  type="text" placeholder="Km" name="km-percorrere" value="">
                 </div>
                 <div class="col py-3">
                     <h4>Fascia d'eta</h4>
@@ -32,14 +32,16 @@
                     </select>
                 </div>
                 <div class="col-12 text-center py-3">
+                    <!-- bottone Invia dati -->
                     <button id="btn-invia"class="btn btn-primary">Invia</button>
+                    <!-- bottone Cancella dati -->
                     <button id="btn-cancel"class="btn btn-primary">Cancella</button>
                 </div>
             </div>
-            <!-- bottone Invia dati -->
+            
             <h1 class="text-center text-uppercase text-white">il tuo biglietto</h1>
         
-            <div class="row  py-3 my-bg-second">
+            <div class="row your-tiket  py-3 my-bg-second">
                 
                 <h4>DETTAGLIO PASSEGGERO</h4>
                 <div class="col my-bg-third">
@@ -84,6 +86,14 @@
                     </div>
                 </div> 
             </div>
+            
+                <div class="row errore  py-3 my-bg-second">
+                    <div class="col">
+                        <h5>!ATTENZIONE!</h5>
+                        <span>Il Biglietto non e stato creato correttamente, Verificare l inserimento dei dati</span>
+                    </div>
+                </div>
+            
         </div>
     </main>
     <script src="js/main.js"></script>

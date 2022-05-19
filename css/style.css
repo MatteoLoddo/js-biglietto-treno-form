@@ -5,6 +5,8 @@
 
 }
 
+
+
 .my-bg-frist{
     background-color: var(--first-color);
 }
@@ -19,4 +21,8 @@
 
 .my-row-setting{
     border-radius: 25px;
+}
+
+:not(.try-my-show).row{
+    display: none;
 }

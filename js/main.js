@@ -16,7 +16,11 @@ const  buttonCancel = document.getElementById("btn-cancel")
 
 
 
+
+
+
 buttonInvia.addEventListener("click", function () {
+    
     const userNameValue = userName.value;
     const kmDaPercorrereN = parseInt(kmDaPercorrere.value);
     const fasciaEtaVal = fasciaEta.value;
@@ -30,33 +34,53 @@ buttonInvia.addEventListener("click", function () {
     const randomCarrozza = Math.floor(Math.random() *100);
     const randomCodCp = Math.floor(Math.random() *9999) + 10000;
 
+    const ilTuoBiglietto = document.querySelector(".your-tiket")
+    const error = document.querySelector(".errore")
+
+
+
     // richiesta alla console  di scrivere i dati inseriti dall utente
-    console.log(userNameValue, kmDaPercorrereN, prezzoStandardCalc, prezzoMinori, prezzoOver65, fasciaEtaVal, randomCarrozza, randomCodCp);
+    console.log(userNameValue.lenght);
 
     
     // console.log(userName.value, kmDaPercorrere.value, fasciaEta.value)
     // console.log(prezzoStandard, prezzoMinori, prezzoOver65,)
     // reset degli inputValue dopo l invio dei dati
 
-    if (fasciaEtaVal == "minorenne"){
+    if(isNaN(kmDaPercorrereN)){
+        error.classList.add("try-my-show")
+        ilTuoBiglietto.classList.remove("try-my-show")
+
+
+    }else if (fasciaEtaVal == "minorenne"){
+        ilTuoBiglietto.classList.add("try-my-show")
+        error.classList.remove("try-my-show")
         document.getElementById("nome-passeggero").innerHTML = ("" + userNameValue);
         document.getElementById("offerta").innerHTML = ("Junior");
         document.getElementById("carrozza").innerHTML = (""+ randomCarrozza);
         document.getElementById("cod-cp").innerHTML = (""+ randomCodCp);
-        document.getElementById("costo-finale").innerHTML = ("" + prezzoMinori);
+        document.getElementById("costo-finale").innerHTML = ("€ " + prezzoMinori);
+
+        
         
     }else if (fasciaEtaVal == "maggiorenne"){
+        ilTuoBiglietto.classList.add("try-my-show")
+        error.classList.remove("try-my-show")
         document.getElementById("nome-passeggero").innerHTML = ("" + userNameValue);
         document.getElementById("offerta").innerHTML = ("Standard");
         document.getElementById("carrozza").innerHTML = (""+ randomCarrozza);
         document.getElementById("cod-cp").innerHTML = (""+ randomCodCp);
-        document.getElementById("costo-finale").innerHTML = ("" + prezzoStandard);
+        document.getElementById("costo-finale").innerHTML = ("€ " + prezzoStandard);
+        
     }else if (fasciaEtaVal == "over65"){
+        ilTuoBiglietto.classList.add("try-my-show")
+        error.classList.remove("try-my-show")
         document.getElementById("nome-passeggero").innerHTML = ("" + userNameValue);
         document.getElementById("offerta").innerHTML = ("Senior");
         document.getElementById("carrozza").innerHTML = (""+ randomCarrozza);
         document.getElementById("cod-cp").innerHTML = (""+ randomCodCp);
-        document.getElementById("costo-finale").innerHTML = ("" + prezzoOver65); 
+        document.getElementById("costo-finale").innerHTML = ("€ " + prezzoOver65); 
+        
     }
 })
 
@@ -65,8 +89,8 @@ buttonInvia.addEventListener("click", function () {
 buttonCancel.addEventListener("click", function (){
         // reset degli inputValue dopo l invio dei dati
     userName.value = ""
-
     kmDaPercorrere.value = ""
-
     fasciaEta.value = ""
 })
+
+
