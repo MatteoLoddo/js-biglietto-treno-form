@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="container-xl text-center">
+            <h1>Calcola il prezzo del tuo biglietto</h1>
+
+            <div class="row ">
+                <div class="col">
+                    <h4>Nome Cognome</h4>
+                    <input type="text" placeholder="Name" name="user-name" value="">
+                </div>
+                <div class="col">
+                    <h4>Km da percorrere</h4>
+                    <input id="km-percorrere" type="text" placeholder="Km" name="km-percorrere" value="0">
+                </div>
+                <div class="col">
+                    <h4>Fascia d'eta</h4>
+                    <select name="fascia-eta">
+                        <option value="minorenne">meno di 18 anni</option>
+                        <option value="18-64">tra i 18 anni e 64 anni</option>
+                        <option value="over65">Oltre 65 anni</option>
+                    </select>
+                </div>
+            </div>
+            <button id="btn-invia"class="btn btn-primary">Invia</button>
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>
